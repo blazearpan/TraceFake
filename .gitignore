@@ -1,0 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+tracefake.db
+reports/*.pdf
+ml/datasets/*.csv
+ml/trained_models/*.joblib
+ml/trained_models/metadata.json
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+.idea/
+.vscode/
+ml/datasets/*.zip
