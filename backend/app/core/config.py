@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     safe_threshold: int = 30
     phishing_threshold: int = 70
     max_url_length: int = 4096
-    cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
+    cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173,https://tracefake-1.onrender.com"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
