@@ -1,0 +1,185 @@
+{
+  "model_name": "Gradient Boosting",
+  "model_version": "1.0-url-only",
+  "random_state": 42,
+  "selection_method": "Selected by validation F1-score, with validation ROC-AUC as tie-breaker. Final metrics are from an untouched test set.",
+  "feature_names": [
+    "url_length",
+    "domain_length",
+    "path_length",
+    "query_length",
+    "dot_count",
+    "hyphen_count",
+    "underscore_count",
+    "digit_count",
+    "special_character_count",
+    "slash_count",
+    "subdirectory_count",
+    "subdomain_count",
+    "query_parameter_count",
+    "uses_https",
+    "has_ip_hostname",
+    "has_at_symbol",
+    "has_punycode",
+    "has_url_encoding",
+    "encoded_character_count",
+    "has_shortener",
+    "suspicious_keyword_count",
+    "has_suspicious_keyword",
+    "character_entropy",
+    "domain_entropy",
+    "digit_ratio",
+    "special_character_ratio",
+    "has_repeated_separators",
+    "tld_length"
+  ],
+  "feature_count": 28,
+  "dataset": {
+    "name": "PhiUSIIL Phishing URL (Website)",
+    "source": "UCI Machine Learning Repository",
+    "url": "https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset",
+    "license": "CC BY 4.0",
+    "rows_after_deduplication": 235370,
+    "phishing": 100520,
+    "legitimate": 134850,
+    "split": {
+      "train": 164759,
+      "validation": 35305,
+      "test": 35306
+    },
+    "note": "Only URL-derived features were used. Webpage/source-code features from the original dataset were intentionally excluded."
+  },
+  "test_metrics": {
+    "accuracy": 0.9960063445306747,
+    "precision": 0.9988644713112017,
+    "recall": 0.9917760976256798,
+    "f1": 0.9953076641485573,
+    "roc_auc": 0.9984702692134969
+  },
+  "confusion_matrix": [
+    [
+      20211,
+      17
+    ],
+    [
+      124,
+      14954
+    ]
+  ],
+  "model_comparison": [
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.9953830902138507,
+      "precision": 0.9995980438132244,
+      "recall": 0.9895874784454172,
+      "f1": 0.9945675720713214,
+      "roc_auc": 0.9977345961380512
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.9952697918141906,
+      "precision": 0.9988624958179994,
+      "recall": 0.9900517309988062,
+      "f1": 0.9944375978416548,
+      "roc_auc": 0.9974710631625126
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.9947316244158051,
+      "precision": 0.9973947895791583,
+      "recall": 0.9902506963788301,
+      "f1": 0.9938099041533547,
+      "roc_auc": 0.9954202108102483
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.9929754992210735,
+      "precision": 0.99952842899488,
+      "recall": 0.9840164478047486,
+      "f1": 0.9917117839716596,
+      "roc_auc": 0.9962672260505159
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "uses_https",
+      "importance": 0.5108182717004348
+    },
+    {
+      "feature": "slash_count",
+      "importance": 0.4664435965444354
+    },
+    {
+      "feature": "url_length",
+      "importance": 0.008480293981527082
+    },
+    {
+      "feature": "digit_count",
+      "importance": 0.005035650843275316
+    },
+    {
+      "feature": "subdomain_count",
+      "importance": 0.004015765885278406
+    },
+    {
+      "feature": "dot_count",
+      "importance": 0.0025744036390735452
+    },
+    {
+      "feature": "special_character_count",
+      "importance": 0.0016825333967006373
+    },
+    {
+      "feature": "digit_ratio",
+      "importance": 0.00038948703424211163
+    },
+    {
+      "feature": "path_length",
+      "importance": 0.00016828557354681178
+    },
+    {
+      "feature": "hyphen_count",
+      "importance": 0.00015646087054900818
+    },
+    {
+      "feature": "special_character_ratio",
+      "importance": 8.768514667497651e-05
+    },
+    {
+      "feature": "domain_entropy",
+      "importance": 4.4484055386125126e-05
+    },
+    {
+      "feature": "character_entropy",
+      "importance": 3.3099061335224825e-05
+    },
+    {
+      "feature": "tld_length",
+      "importance": 3.194331366977455e-05
+    },
+    {
+      "feature": "domain_length",
+      "importance": 2.117616335167573e-05
+    },
+    {
+      "feature": "has_suspicious_keyword",
+      "importance": 1.0781701127284706e-05
+    },
+    {
+      "feature": "suspicious_keyword_count",
+      "importance": 5.714245536097324e-06
+    },
+    {
+      "feature": "has_punycode",
+      "importance": 3.6684385585286014e-07
+    },
+    {
+      "feature": "query_length",
+      "importance": 0.0
+    },
+    {
+      "feature": "underscore_count",
+      "importance": 0.0
+    }
+  ]
+}
